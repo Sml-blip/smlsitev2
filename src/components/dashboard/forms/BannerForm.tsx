@@ -35,13 +35,13 @@ const BannerForm: React.FC = () => {
   };
 
   return (
-    <div className="max-w-screen-xl w-full mx-auto bg-white dark:bg-neutral-900 rounded-lg shadow-md p-6 my-4">
-      <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+    <div className="max-w-screen-xl w-full mx-auto bg-white rounded-lg shadow-md p-6 my-4">
+      <h2 className="text-2xl font-semibold text-gray-900 mb-6">
         Add Banner
       </h2>
       <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div className="space-y-2">
-          <Label htmlFor="title" className="block text-sm font-medium text-gray-700 dark:text-white">
+          <Label htmlFor="title" className="block text-sm font-medium text-gray-700">
             Title
           </Label>
           <Input
@@ -49,13 +49,13 @@ const BannerForm: React.FC = () => {
             id="title"
             {...register("title")}
             className={`mt-1 p-2 w-full rounded-md border ${
-              errors.title ? "border-red-500" : "border-gray-300 dark:border-gray-600"
+              errors.title ? "border-red-500" : "border-gray-300"
             } focus:ring-blue-500 focus:border-blue-500`}
           />
           {errors.title && <span className="text-red-500 text-sm">{errors.title.message}</span>}
         </div>
         <div className="space-y-2">
-          <Label htmlFor="description" className="block text-sm font-medium text-gray-700 dark:text-white">
+          <Label htmlFor="description" className="block text-sm font-medium text-gray-700">
             Description
           </Label>
           <Input
@@ -63,13 +63,13 @@ const BannerForm: React.FC = () => {
             id="description"
             {...register("description")}
             className={`mt-1 p-2 w-full rounded-md border ${
-              errors.description ? "border-red-500" : "border-gray-300 dark:border-gray-600"
+              errors.description ? "border-red-500" : "border-gray-300"
             } focus:ring-blue-500 focus:border-blue-500`}
           />
           {errors.description && <span className="text-red-500 text-sm">{errors.description.message}</span>}
         </div>
         <div className="space-y-2">
-          <Label htmlFor="buttonText" className="block text-sm font-medium text-gray-700 dark:text-white">
+          <Label htmlFor="buttonText" className="block text-sm font-medium text-gray-700">
             Button Text
           </Label>
           <Input
@@ -77,13 +77,13 @@ const BannerForm: React.FC = () => {
             id="buttonText"
             {...register("buttonText")}
             className={`mt-1 p-2 w-full rounded-md border ${
-              errors.buttonText ? "border-red-500" : "border-gray-300 dark:border-gray-600"
+              errors.buttonText ? "border-red-500" : "border-gray-300"
             } focus:ring-blue-500 focus:border-blue-500`}
           />
           {errors.buttonText && <span className="text-red-500 text-sm">{errors.buttonText.message}</span>}
         </div>
         <div className="space-y-2">
-          <Label htmlFor="buttonLink" className="block text-sm font-medium text-gray-700 dark:text-white">
+          <Label htmlFor="buttonLink" className="block text-sm font-medium text-gray-700">
             Button Link
           </Label>
           <Input
@@ -91,13 +91,13 @@ const BannerForm: React.FC = () => {
             id="buttonLink"
             {...register("buttonLink")}
             className={`mt-1 p-2 w-full rounded-md border ${
-              errors.buttonLink ? "border-red-500" : "border-gray-300 dark:border-gray-600"
+              errors.buttonLink ? "border-red-500" : "border-gray-300"
             } focus:ring-blue-500 focus:border-blue-500`}
           />
           {errors.buttonLink && <span className="text-red-500 text-sm">{errors.buttonLink.message}</span>}
         </div>
         <div className="space-y-2">
-          <Label htmlFor="image" className="block text-sm font-medium text-gray-700 dark:text-white">
+          <Label htmlFor="image" className="block text-sm font-medium text-gray-700">
             Upload Image
           </Label>
           <Input
@@ -105,7 +105,7 @@ const BannerForm: React.FC = () => {
             id="image"
             {...register("image")}
             className={`mt-1 p-2 w-full rounded-md border ${
-              errors.image ? "border-red-500" : "border-gray-300 dark:border-gray-600"
+              errors.image ? "border-red-500" : "border-gray-300"
             } focus:ring-blue-500 focus:border-blue-500`}
           />
           {errors.image && <span className="text-red-500 text-sm">{errors.image.message}</span>}

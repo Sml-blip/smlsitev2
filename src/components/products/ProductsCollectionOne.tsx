@@ -99,7 +99,7 @@ const ProductsCollectionOne = () => {
                   <button
                     onClick={handleLoadMore}
                     disabled={loadingMore}
-                    className="relative flex items-center gap-2 px-10 py-3 rounded-full bg-black text-white font-bold text-base overflow-hidden disabled:opacity-60 group"
+                    className="relative flex items-center gap-2 px-10 py-3 rounded-full bg-gray-900 text-white font-bold text-base overflow-hidden disabled:opacity-60 group"
                     style={{ isolation: "isolate" }}
                   >
                     <span

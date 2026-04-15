@@ -53,8 +53,8 @@ const SearchComponent = ({
 
   if (foundProducts.length === 0) {
     return <div className="text-xl font-medium flex flex-col items-center justify-center h-screen w-full">
-      <p className="p-4 text-center" >Sorry, no search result found for your query !</p>
-      <Link className="p-2 underline text-muted-foreground" href={'/'}>Home</Link>
+      <p className="p-4 text-center">Désolé, aucun résultat trouvé pour votre recherche !</p>
+      <Link className="p-2 underline text-muted-foreground" href={'/'}>Accueil</Link>
     </div>;
   }
 
@@ -62,8 +62,7 @@ const SearchComponent = ({
     <div className="max-w-screen-xl mx-auto p-4 md:p-8 space-y-2">
       <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
       <BreadcrumbComponent links={["/shop"]} pageText={searchParams.query!} />
-      <p className=" capitalize">{foundProducts.length} results found for your search <span className="text-lg font-medium">
-      {searchParams.query}</span></p>
+      <p className="capitalize">{foundProducts.length} résultat{foundProducts.length > 1 ? "s" : ""} pour <span className="text-lg font-medium">{searchParams.query}</span></p>
       </div>
       <div className="hidden lg:grid grid-cols-1 gap-6">
         {foundProducts.map((product) => (

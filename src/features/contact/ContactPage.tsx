@@ -47,24 +47,24 @@ const ContactPageDefault = () => {
 
 const ContactPageAlternate = () => {
   return (
-    <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-slate-100 dark:bg-slate-900">
+    <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gradient-to-b from-white via-yellow-50/30 to-white">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <ContactForm />
-        <div className=" lg:col-span-1 bg-white dark:bg-neutral-900 rounded-lg shadow-md overflow-hidden">
+        <div className="lg:col-span-1 bg-white border border-yellow-100 shadow-sm rounded-lg overflow-hidden">
           <div className="px-6 py-8 md:px-10">
-            <h2 className="text-3xl font-semibold text-gray-900 dark:text-white mb-6">Informations de contact</h2>
+            <h2 className="text-3xl font-semibold text-gray-900 mb-6">Informations de contact</h2>
             <div className="space-y-4">
               <div>
-                <h3 className="text-lg font-medium text-gray-700 dark:text-gray-300">Adresse</h3>
-                <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">123 Rue Principale, Tunis, Tunisie</p>
+                <h3 className="text-lg font-medium text-gray-700">Adresse</h3>
+                <p className="mt-1 text-sm text-gray-500">123 Rue Principale, Tunis, Tunisie</p>
               </div>
               <div>
-                <h3 className="text-lg font-medium text-gray-700 dark:text-gray-300">Téléphone</h3>
-                <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">+216 12 345 678</p>
+                <h3 className="text-lg font-medium text-gray-700">Téléphone</h3>
+                <p className="mt-1 text-sm text-gray-500">+216 12 345 678</p>
               </div>
               <div>
-                <h3 className="text-lg font-medium text-gray-700 dark:text-gray-300">Email</h3>
-                <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">info@sml-informatique.tn</p>
+                <h3 className="text-lg font-medium text-gray-700">Email</h3>
+                <p className="mt-1 text-sm text-gray-500">info@sml-informatique.tn</p>
               </div>
             </div>
           </div>

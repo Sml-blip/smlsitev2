@@ -38,9 +38,9 @@ const SingleProductCartView = ({ product }: { product: Product }) => {
   return (
     <Link
       href={getProductUrl(product)}
-      className="relative border border-black/10 dark:border-white/10 rounded-xl overflow-hidden group flex flex-col h-full bg-white dark:bg-black hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
+      className="relative border border-gray-200 rounded-xl overflow-hidden group flex flex-col h-full bg-white hover:shadow-xl hover:shadow-yellow-200/60 hover:border-yellow-200 transition-all duration-300"
     >
-      <div className="w-full bg-white dark:bg-black overflow-hidden">
+      <div className="w-full bg-white overflow-hidden">
         <div className="relative w-full h-40 sm:h-48 md:h-56 lg:h-64 group-hover:scale-105 transition-all duration-300 rounded-md overflow-hidden">
           <ProductImage 
             src={images?.[0]} 

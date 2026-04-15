@@ -7,6 +7,8 @@ import {
   Box,
   Users,
   SearchCheck,
+  Gamepad2,
+  Images,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -46,7 +48,18 @@ const DashboardSidebar = () => {
         icon: <SearchCheck size={20} />,
         isActive: pathname.includes("dashboard/seo"),
       },
-
+      {
+        link: "/dashboard/gallery",
+        label: "Galerie",
+        icon: <Images size={20} />,
+        isActive: pathname.includes("dashboard/gallery"),
+      },
+      {
+        link: "/dashboard/3alouch",
+        label: "🐑 عيد الأضحى",
+        icon: <Gamepad2 size={20} />,
+        isActive: pathname.includes("dashboard/3alouch"),
+      },
   ];
 
   return (

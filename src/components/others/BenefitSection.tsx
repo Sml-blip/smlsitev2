@@ -28,7 +28,7 @@ const benefits = [
 
 const BenefitsSection = () => {
   return (
-    <section className="py-16 bg-white dark:bg-black">
+    <section className="py-16 bg-gradient-to-r from-white via-yellow-50/40 to-white">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

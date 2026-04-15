@@ -24,7 +24,7 @@ const ShopPage = ({ products, page = "1", allCategories = [], allBrands = [], se
   const [showMobileFilter, setShowMobileFilter] = useState(false);
 
   return (
-    <div className="w-full bg-gray-50 dark:bg-black min-h-screen">
+    <div className="w-full bg-gradient-to-b from-white via-yellow-50/20 to-white min-h-screen">
       <div className="mx-auto max-w-7xl px-2 md:px-8 py-4 md:py-8">
 
         {/* Mobile filter button */}
@@ -46,8 +46,8 @@ const ShopPage = ({ products, page = "1", allCategories = [], allBrands = [], se
               className="absolute inset-0 bg-black/50"
               onClick={() => setShowMobileFilter(false)}
             />
-            <div className="absolute left-0 top-0 h-full w-80 max-w-[85vw] bg-white dark:bg-black overflow-y-auto">
-              <div className="flex items-center justify-between p-4 border-b dark:border-neutral-800">
+            <div className="absolute left-0 top-0 h-full w-80 max-w-[85vw] bg-white overflow-y-auto">
+              <div className="flex items-center justify-between p-4 border-b border-yellow-100">
                 <h2 className="text-lg font-semibold">Filtres</h2>
                 <Button variant="ghost" size="icon" onClick={() => setShowMobileFilter(false)}>
                   <X size={24} />

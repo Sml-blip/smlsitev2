@@ -22,14 +22,14 @@ const ProductOverviewChart = () => {
   ];
 
   return (
-    <div className="bg-white dark:bg-neutral-900 rounded-lg shadow-md p-6 mb-6">
-      <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+    <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+      <h2 className="text-xl font-semibold text-gray-900 mb-4">
         Product Overview
       </h2>
 
       {/* Product Sales Distribution Chart */}
       <div className="mb-6">
-        <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">
+        <h3 className="text-base font-semibold text-gray-900 mb-2">
           Product Sales Distribution
         </h3>
         <ResponsiveContainer width="100%" height={300}>
@@ -45,7 +45,7 @@ const ProductOverviewChart = () => {
 
       {/* Top Selling Products Chart */}
       <div>
-        <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">
+        <h3 className="text-base font-semibold text-gray-900 mb-2">
           Top Selling Products
         </h3>
         <ResponsiveContainer width="100%" height={300}>

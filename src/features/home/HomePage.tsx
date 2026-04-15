@@ -5,6 +5,7 @@ import BannerOne from "@/components/banners/BannerOne";
 import BenefitsSection from "@/components/others/BenefitSection";
 import Loader from "@/components/others/Loader";
 import CategorySectionOne from "@/components/category/CategorySectionOne";
+import GalerieSection from "@/components/gallery/GalerieSection";
 
 export type HomePageVariant = "default" | "alternate";
 
@@ -23,6 +24,7 @@ const HomePageDefault = () => {
   return (
     <section className="overflow-hidden">
       <HeroBannerOne />
+      <GalerieSection />
       <Suspense fallback={<Loader />}>
         <CategorySectionOne />
       </Suspense>

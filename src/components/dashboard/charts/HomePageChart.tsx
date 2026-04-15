@@ -25,8 +25,8 @@ const HomePageChart = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {/* Chart 1: Sales Performance Over Time */}
-      <div className="bg-white dark:bg-neutral-900 rounded-lg shadow-md p-4">
-        <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Sales Performance Over Time</h2>
+      <div className="bg-white  rounded-lg shadow-md p-4">
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">Sales Performance Over Time</h2>
         <ResponsiveContainer width="100%" height={300}>
           <AreaChart data={salesData}>
             <Area type="monotone" dataKey="Sales" stroke="#3182CE" fill="#3182CE" />
@@ -38,8 +38,8 @@ const HomePageChart = () => {
       </div>
 
       {/* Chart 2: Product Category Distribution */}
-      <div className="bg-white dark:bg-neutral-900 rounded-lg shadow-md p-4">
-        <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Product Category Distribution</h2>
+      <div className="bg-white  rounded-lg shadow-md p-4">
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">Product Category Distribution</h2>
         <ResponsiveContainer width="100%" height={300}>
           <BarChart data={categoryData}>
             <XAxis dataKey="name" />

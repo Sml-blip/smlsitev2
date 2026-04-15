@@ -97,14 +97,14 @@ const OrderActions = ({ order, onStatusChange }: OrderActionsProps) => {
     <div>
       <Popover>
         <PopoverTrigger className="">
-          <div className="flex items-center justify-center hover:bg-slate-200 p-2 rounded-full dark:hover:bg-slate-900 duration-200">
+          <div className="flex items-center justify-center hover:bg-slate-200 p-2 rounded-full duration-200">
             <MoreHorizontal />
           </div>
         </PopoverTrigger>
         <PopoverContent className="text-start w-56">
           <button
             onClick={() => setShowDetails(true)}
-            className="py-2 px-4 rounded-md w-full block hover:bg-slate-200 dark:hover:bg-slate-900 text-left flex items-center gap-2"
+            className="py-2 px-4 rounded-md w-full block hover:bg-slate-200 text-left flex items-center gap-2"
           >
             <Eye size={16} />
             Voir les détails
@@ -134,7 +134,7 @@ const OrderActions = ({ order, onStatusChange }: OrderActionsProps) => {
           <button 
             onClick={handleCancel}
             disabled={updating || currentStatus === "Annulé"}
-            className="w-full text-start hover:bg-red-100 dark:hover:bg-red-900/30 py-2 px-4 rounded-md text-red-600 disabled:opacity-50"
+            className="w-full text-start hover:bg-red-100 py-2 px-4 rounded-md text-red-600 disabled:opacity-50"
           >
             {updating ? "Mise à jour..." : "Annuler la commande"}
           </button>

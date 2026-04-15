@@ -7,14 +7,14 @@ import React from "react";
 
 const CartPage = () => {
   return (
-    <section className="p-4 md:p-8  bg-white dark:bg-neutral-900">
+    <section className="p-4 md:p-8 bg-gradient-to-b from-white via-yellow-50/30 to-white">
       <div className="max-w-screen-xl mx-auto">
         <div className="space-y-3">
-          <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
-            Shopping Cart
+          <h1 className="text-3xl lg:text-4xl font-bold text-gray-900">
+            Mon Panier
           </h1>
-          <BreadcrumbComponent links={["/cart"]} pageText="Shopping Cart" />
-          <Separator className="dark:bg-white" />
+          <BreadcrumbComponent links={["/cart"]} pageText="Mon Panier" />
+          <Separator />
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-4">
           <CartItemsDetails />

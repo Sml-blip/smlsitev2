@@ -62,7 +62,7 @@ const Notification = ({ onOpenChat }: NotificationProps) => {
 
   return (
     <Popover open={open} onOpenChange={handleOpen}>
-      <PopoverTrigger className="relative p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 duration-200">
+      <PopoverTrigger className="relative p-2 rounded-md hover:bg-gray-200 duration-200">
         <Bell size={20} />
         {unreadCount > 0 && (
           <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] bg-[#FFCC00] text-black text-[10px] font-bold rounded-full flex items-center justify-center px-1">
@@ -126,10 +126,10 @@ const Notification = ({ onOpenChat }: NotificationProps) => {
             staticNotifications.map((notification) => (
               <div key={notification.id} className="py-3 px-4">
                 <div className="flex items-center justify-between">
-                  <p className="text-sm text-gray-900 dark:text-white">
+                  <p className="text-sm text-gray-900">
                     {notification.message}
                   </p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 ml-2 shrink-0">
+                  <p className="text-xs text-gray-500 ml-2 shrink-0">
                     {notification.time}
                   </p>
                 </div>

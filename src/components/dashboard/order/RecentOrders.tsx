@@ -35,11 +35,11 @@ const RecentOrdersSection = () => {
   if (loading) return null;
 
   return (
-    <div className="bg-white dark:bg-neutral-900 rounded-lg shadow-md p-6 my-4">
-      <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Commandes récentes</h2>
+    <div className="bg-white rounded-lg shadow-md p-6 my-4">
+      <h2 className="text-xl font-semibold text-gray-900 mb-4">Commandes récentes</h2>
       <div className="overflow-x-auto">
-        <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-          <thead className="bg-gray-50 dark:bg-neutral-800">
+        <table className="min-w-full divide-y divide-gray-200">
+          <thead className="bg-gray-50">
             <tr>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Numéro</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Client</th>
@@ -48,13 +48,13 @@ const RecentOrdersSection = () => {
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+          <tbody className="divide-y divide-gray-200">
             {orders.length === 0 ? (
-              <tr className="bg-white dark:bg-neutral-900">
+              <tr className="bg-white">
                 <td colSpan={5} className="px-6 py-4 text-center text-sm text-gray-500">Aucune commande récente.</td>
               </tr>
             ) : orders.slice(0, 5).map((order) => (
-              <tr key={order.id} className="bg-white dark:bg-neutral-900">
+              <tr key={order.id} className="bg-white">
                 <td className="px-6 py-4 whitespace-nowrap">{order.orderNumber}</td>
                 <td className="px-6 py-4 whitespace-nowrap">{order.customerName}</td>
                 <td className="px-6 py-4 whitespace-nowrap">{order.date}</td>

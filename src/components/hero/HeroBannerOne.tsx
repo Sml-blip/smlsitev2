@@ -76,11 +76,11 @@ const Scanlines = () => (
 // ── Grid background ───────────────────────────────────────────────────────────
 const CyberpunkGrid = ({ accentRgb }: { accentRgb: string }) => (
   <div
-    className="pointer-events-none absolute inset-0 opacity-[0.07]"
+    className="pointer-events-none absolute inset-0 opacity-[0.04]"
     style={{
       backgroundImage: `
-        linear-gradient(rgba(${accentRgb},0.6) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(${accentRgb},0.6) 1px, transparent 1px)
+        linear-gradient(rgba(${accentRgb},0.8) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(${accentRgb},0.8) 1px, transparent 1px)
       `,
       backgroundSize: "60px 60px",
       maskImage:
@@ -248,19 +248,18 @@ const HeroBannerOne = () => {
   const { accent, accentRgb } = product;
 
   return (
-    <section className="relative bg-black overflow-hidden flex items-center" style={{ minHeight: "100svh" }}>
+    <section className="relative bg-gradient-to-br from-white via-yellow-50/60 to-white overflow-hidden flex items-center" style={{ minHeight: "100svh" }}>
       <CyberpunkGrid accentRgb={accentRgb} />
-      <Scanlines />
       <CornerBrackets accentRgb={accentRgb} />
       <Particles accent={accent} accentRgb={accentRgb} />
 
       {/* Deep glow behind product */}
       <div
-        className="pointer-events-none absolute right-[5%] md:right-[10%] top-1/2 -translate-y-1/2 rounded-full opacity-30 blur-3xl"
+        className="pointer-events-none absolute right-[5%] md:right-[10%] top-1/2 -translate-y-1/2 rounded-full opacity-20 blur-3xl"
         style={{
           width: "min(500px, 80vw)",
           height: "min(500px, 80vw)",
-          background: `radial-gradient(circle, rgba(${accentRgb},0.5) 0%, transparent 70%)`,
+          background: `radial-gradient(circle, rgba(${accentRgb},0.4) 0%, transparent 70%)`,
           transition: "background 0.7s",
         }}
       />
@@ -300,8 +299,8 @@ const HeroBannerOne = () => {
             <motion.div
               animate={{ y: [0, -5, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-2 right-2 md:top-6 md:right-0 z-20 bg-black/80 backdrop-blur-sm px-2.5 py-1 rounded-lg"
-              style={{ border: `1px solid rgba(${accentRgb},0.4)` }}
+              className="absolute top-2 right-2 md:top-6 md:right-0 z-20 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-lg shadow-sm"
+              style={{ border: `1px solid rgba(${accentRgb},0.35)` }}
             >
               <span className="text-[10px] sm:text-xs font-mono font-bold" style={{ color: accent }}>
                 {product.category}
@@ -312,10 +311,10 @@ const HeroBannerOne = () => {
             <motion.div
               animate={{ y: [0, 5, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute bottom-2 left-2 md:bottom-6 md:left-0 z-20 bg-black/80 backdrop-blur-sm px-2.5 py-1 rounded-lg"
-              style={{ border: `1px solid rgba(${accentRgb},0.4)` }}
+              className="absolute bottom-2 left-2 md:bottom-6 md:left-0 z-20 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-lg shadow-sm"
+              style={{ border: `1px solid rgba(${accentRgb},0.35)` }}
             >
-              <span className="text-white/70 text-[10px] sm:text-xs font-mono">
+              <span className="text-gray-600 text-[10px] sm:text-xs font-mono">
                 <span style={{ color: accent }}>✓</span> Livraison TN
               </span>
             </motion.div>
@@ -334,13 +333,13 @@ const HeroBannerOne = () => {
               >
                 <CyberpunkBadge text={product.badge} accent={accent} accentRgb={accentRgb} />
 
-                <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-black leading-tight text-white">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-black leading-tight text-gray-900">
                   {product.name.split(" ").slice(0, 2).join(" ")}{" "}
                   <span style={{ color: accent }}>{product.name.split(" ").slice(2).join(" ")}</span>
                 </h1>
 
                 {/* Subtitle */}
-                <p className="text-xs sm:text-sm text-white/40 font-mono max-w-sm mx-auto md:mx-0">
+                <p className="text-xs sm:text-sm text-gray-400 font-mono max-w-sm mx-auto md:mx-0">
                   {product.subtitle}
                 </p>
 
@@ -348,7 +347,7 @@ const HeroBannerOne = () => {
                   <span className="text-xl sm:text-2xl md:text-3xl font-black font-mono" style={{ color: accent }}>
                     {product.price.toLocaleString("fr-TN")} TND
                   </span>
-                  <span className="text-xs text-white/30 font-mono">TTC</span>
+                  <span className="text-xs text-gray-400 font-mono">TTC</span>
                 </div>
 
                 <div className="flex flex-row gap-2 justify-center md:justify-start">
@@ -357,7 +356,7 @@ const HeroBannerOne = () => {
                     className="group inline-flex items-center justify-center gap-1.5 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm text-black transition-all duration-200 flex-1 sm:flex-none"
                     style={{
                       background: accent,
-                      boxShadow: `0 0 20px rgba(${accentRgb},0.4)`,
+                      boxShadow: `0 0 20px rgba(${accentRgb},0.35)`,
                     }}
                   >
                     <ShoppingCart size={15} />
@@ -367,9 +366,9 @@ const HeroBannerOne = () => {
 
                   <Link
                     href="/shop"
-                    className="inline-flex items-center justify-center gap-1.5 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold text-xs sm:text-sm font-mono hover:bg-white/5 transition-all duration-200 flex-1 sm:flex-none"
+                    className="inline-flex items-center justify-center gap-1.5 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold text-xs sm:text-sm font-mono hover:bg-gray-100 transition-all duration-200 flex-1 sm:flex-none"
                     style={{
-                      border: `1px solid rgba(${accentRgb},0.4)`,
+                      border: `1px solid rgba(${accentRgb},0.5)`,
                       color: accent,
                     }}
                   >
@@ -378,7 +377,7 @@ const HeroBannerOne = () => {
                   </Link>
                 </div>
 
-                <p className="text-[10px] text-white/25 font-mono uppercase tracking-widest hidden sm:block">
+                <p className="text-[10px] text-gray-300 font-mono uppercase tracking-widest hidden sm:block">
                   // {product.category}
                 </p>
               </motion.div>
@@ -394,7 +393,7 @@ const HeroBannerOne = () => {
               onClick={() => goTo(i)}
               className={cn(
                 "transition-all duration-300 rounded-full",
-                i !== current && "w-2 h-2 bg-white/20 hover:bg-white/40"
+                i !== current && "w-2 h-2 bg-gray-300 hover:bg-gray-400"
               )}
               style={
                 i === current
@@ -407,20 +406,20 @@ const HeroBannerOne = () => {
         </div>
 
         {/* ── Bottom HUD bar (desktop only) ── */}
-        <div className="hidden md:flex items-center justify-between mt-6 pt-4 border-t border-white/5 relative z-20">
-          <span className="text-white/20 text-xs font-mono">SML_INFORMATIQUE_v2.0 // TUNIS</span>
+        <div className="hidden md:flex items-center justify-between mt-6 pt-4 border-t border-gray-200 relative z-20">
+          <span className="text-gray-400 text-xs font-mono">SML_INFORMATIQUE_v2.0 // TUNIS</span>
           <div className="flex items-center gap-6">
             {["PC Portable", "Smartphone", "Accessoires"].map((cat) => (
               <Link
                 key={cat}
                 href={`/shop?category=${encodeURIComponent(cat)}`}
-                className="text-white/30 hover:text-white text-xs font-mono transition-colors uppercase tracking-wider"
+                className="text-gray-400 hover:text-gray-900 text-xs font-mono transition-colors uppercase tracking-wider"
               >
                 {cat}
               </Link>
             ))}
           </div>
-          <span className="text-white/20 text-xs font-mono">
+          <span className="text-gray-400 text-xs font-mono">
             {String(current + 1).padStart(2, "0")} / {String(HERO_PRODUCTS.length).padStart(2, "0")}
           </span>
         </div>

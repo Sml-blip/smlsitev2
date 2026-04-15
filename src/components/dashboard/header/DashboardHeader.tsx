@@ -21,7 +21,7 @@ const DashboardHeader = () => {
 
   return (
     <>
-      <header className="bg-white dark:bg-black shadow sticky top-0 left-0 right-0 z-50">
+      <header className="bg-white shadow sticky top-0 left-0 right-0 z-50">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <Logo />
           <div className="flex items-center gap-4">

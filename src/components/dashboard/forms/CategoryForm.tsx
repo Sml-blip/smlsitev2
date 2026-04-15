@@ -33,15 +33,15 @@ const CategoryForm: React.FC = () => {
   };
 
   return (
-    <div className="max-w-screen-xl w-full mx-auto bg-white dark:bg-neutral-900 rounded-lg shadow-md p-6 my-4">
-      <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+    <div className="max-w-screen-xl w-full mx-auto bg-white rounded-lg shadow-md p-6 my-4">
+      <h2 className="text-2xl font-semibold text-gray-900 mb-6">
         Add Category
       </h2>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <div className="space-y-2">
           <Label
             htmlFor="name"
-            className="block text-sm font-medium text-gray-700 dark:text-white"
+            className="block text-sm font-medium text-gray-700"
           >
             Category Name
           </Label>
@@ -50,7 +50,7 @@ const CategoryForm: React.FC = () => {
             id="name"
             {...register("name")}
             className={`mt-1 p-2 w-full rounded-md border ${
-              errors.name ? "border-red-500" : "border-gray-300 dark:border-gray-600"
+              errors.name ? "border-red-500" : "border-gray-300"
             } focus:ring-blue-500 focus:border-blue-500`}
           />
           {errors.name && (
@@ -60,7 +60,7 @@ const CategoryForm: React.FC = () => {
         <div className="space-y-2">
           <Label
             htmlFor="image"
-            className="block text-sm font-medium text-gray-700 dark:text-white"
+            className="block text-sm font-medium text-gray-700"
           >
             Image Upload
           </Label>
@@ -69,7 +69,7 @@ const CategoryForm: React.FC = () => {
             id="image"
             {...register("image")}
             className={`mt-1 p-2 w-full rounded-md border ${
-              errors.image ? "border-red-500" : "border-gray-300 dark:border-gray-600"
+              errors.image ? "border-red-500" : "border-gray-300"
             } focus:ring-blue-500 focus:border-blue-500`}
           />
           {errors.image && (
@@ -79,15 +79,15 @@ const CategoryForm: React.FC = () => {
         <div className="space-y-2">
           <Label
             htmlFor="description"
-            className="block text-sm font-medium text-gray-700 dark:text-white"
+            className="block text-sm font-medium text-gray-700"
           >
             Description
           </Label>
           <textarea
             id="description"
             {...register("description")}
-            className={`mt-1 p-2 w-full bg-white dark:bg-black rounded-md  border ${
-              errors.description ? "border-red-500" : "border-gray-300 dark:border-gray-600"
+            className={`mt-1 p-2 w-full bg-white rounded-md  border ${
+              errors.description ? "border-red-500" : "border-gray-300"
             } focus:ring-blue-500 focus:border-blue-500`}
           ></textarea>
           {errors.description && (

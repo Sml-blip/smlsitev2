@@ -248,7 +248,7 @@ const BackgroundRemover = () => {
         <Button
           variant="outline"
           onClick={() => setIsOpen(true)}
-          className="border-primary text-black dark:text-white hover:bg-primary hover:text-black"
+          className="border-primary text-black hover:bg-primary hover:text-black"
         >
           <ImageIcon className="w-4 h-4 mr-2" />
           Auto BG Remove
@@ -270,7 +270,7 @@ const BackgroundRemover = () => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
-      <div className="bg-white dark:bg-black border border-white/10 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden">
+      <div className="bg-white border border-white/10 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden">
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-white/10 bg-black text-white">
           <div className="flex items-center gap-3">

@@ -113,7 +113,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" suppressHydrationWarning>
+    <html lang="fr" suppressHydrationWarning style={{ colorScheme: "light" }}>
       <body className={cn("antialiased", outfit.className)}>
         <Script
           id="orchids-browser-logs"
@@ -135,6 +135,7 @@ export default function RootLayout({
           <ThemeProvider
             attribute="class"
             defaultTheme="light"
+            forcedTheme="light"
             enableSystem={false}
             disableTransitionOnChange
           >

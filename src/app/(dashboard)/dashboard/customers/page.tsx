@@ -26,16 +26,16 @@ const CustomersPage = () => {
   ];
 
   return (
-    <div className="max-w-screen-xl w-full p-4 my-4 mx-auto dark:bg-slate-900 rounded-md">
+    <div className="max-w-screen-xl w-full p-4 my-4 mx-auto rounded-md">
       <div className="flex items-center justify-between gap-2 mb-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white ">
+        <h2 className="text-2xl font-semibold text-gray-900 ">
           Customers
         </h2>
         <SearchCustomer />
       </div>
       <div className="overflow-x-auto">
-        <table className="min-w-full divide-y dark:text-slate-100 divide-gray-200 dark:divide-gray-700 border">
-          <thead className="bg-gray-50 dark:bg-neutral-900">
+        <table className="min-w-full divide-y divide-gray-200 border">
+          <thead className="bg-gray-50">
             <tr>
               <th
                 scope="col"
@@ -75,7 +75,7 @@ const CustomersPage = () => {
               </th>
             </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-gray-200 dark:bg-black dark:divide-gray-700">
+          <tbody className="bg-white divide-y divide-gray-200">
             {dummyCustomers.map((customer) => (
               <tr key={customer.id}>
                 <td className="px-6 py-4 whitespace-nowrap text-sm">

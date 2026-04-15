@@ -31,16 +31,16 @@ const SignInForm = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-white dark:bg-black">
-      <div className="bg-white dark:bg-black border border-border p-8 rounded-lg shadow-md w-full max-w-md">
-        <h2 className="text-2xl font-bold text-black dark:text-white mb-4">
-          Sign In
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-white via-yellow-50/30 to-white">
+      <div className="bg-white border border-yellow-100 shadow-sm p-8 rounded-lg w-full max-w-md">
+        <h2 className="text-2xl font-bold text-black mb-4">
+          Connexion
         </h2>
         <div>
-          <Button className="w-full p-6 flex items-center justify-center gap-2 text-lg mt-6 bg-black dark:bg-white text-white dark:text-black hover:bg-black/80 dark:hover:bg-white/80">
-            <FaGoogle size={25} /> Sign In With Google
+          <Button className="w-full p-6 flex items-center justify-center gap-2 text-lg mt-6 bg-black text-white hover:bg-black/80">
+            <FaGoogle size={25} /> Connexion avec Google
           </Button>
-          <p className="text-lg font-bold my-2 text-center">OR</p>
+          <p className="text-lg font-bold my-2 text-center">OU</p>
         </div>
         <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
           <div>
@@ -48,7 +48,7 @@ const SignInForm = () => {
               htmlFor="email"
               className="block text-sm font-medium"
             >
-              Email Address
+              Adresse e-mail
             </Label>
             <Input
               type="email"
@@ -70,7 +70,7 @@ const SignInForm = () => {
               htmlFor="password"
               className="block text-sm font-medium"
             >
-              Password
+              Mot de passe
             </Label>
             <Input
               type="password"
@@ -91,19 +91,19 @@ const SignInForm = () => {
             type="submit"
             className="w-full bg-primary text-black py-3 px-6 rounded-lg hover:bg-primary/80 focus:outline-none"
           >
-            Sign In
+            Se connecter
           </Button>
         </form>
         <p className="text-center m-1">
-          Don&apos;t have an account{" "}
+          Pas encore de compte ?{" "}
           <Link className="underline text-primary" href={"/sign-up"}>
-            Sign Up
+            S&apos;inscrire
           </Link>
         </p>
         <div className="font-medium">
-          Forgot Password
+          Mot de passe oublié ?
           <Link className="underline p-2 text-primary" href={"/forgot-password"}>
-            here
+            Cliquez ici
           </Link>
         </div>
       </div>

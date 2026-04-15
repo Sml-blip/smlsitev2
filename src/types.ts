@@ -1,10 +1,31 @@
 // change or modify the types as your requirement
 
+export type ParentCategory = 'Informatique' | 'Électroménager';
+
+export const PARENT_CATEGORIES: { id: ParentCategory; label: string; emoji: string }[] = [
+  { id: 'Informatique',    label: 'Informatique',    emoji: '💻' },
+  { id: 'Électroménager', label: 'Électroménager',  emoji: '🏠' },
+];
+
+// Sub-categories per parent
+export const SUBCATEGORIES: Record<ParentCategory, string[]> = {
+  Informatique: [
+    'PC PORTABLE', 'COMPOSANTS', 'ECRANS', 'ACCESSOIRES',
+    'SMARTPHONE ACCESSOIRES', 'IMAGE & SON', 'CONSOLES',
+    'SÉCURITÉ & PROTECTION', 'CABLES', 'SOURIS', 'STOCKAGE', 'AUDIO',
+  ],
+  Électroménager: [
+    'RÉFRIGÉRATEURS', 'LAVE-LINGE', 'CLIMATISEURS', 'FOURS & MICRO-ONDES',
+    'ASPIRATEURS', 'TÉLÉVISEURS', 'PETIT ÉLECTROMÉNAGER', 'CUISINE',
+  ],
+};
+
 export type Product = {
   id: string | number;
   name: string;
   slug?: string;
   category: string;
+  parent_category?: ParentCategory;
   description: string;
   about_item?: string[];
   aboutItem?: string[];

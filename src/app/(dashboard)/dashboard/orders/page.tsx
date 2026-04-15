@@ -45,16 +45,16 @@ const OrdersPage = () => {
   if (loading) return <Loader />;
 
   return (
-    <div className="max-w-screen-xl mx-auto w-full bg-white dark:bg-neutral-900 rounded-lg shadow-md p-6 my-4 ">
+    <div className="max-w-screen-xl mx-auto w-full bg-white rounded-lg shadow-md p-6 my-4">
       <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
-        <h2 className="text-lg font-semibold text-gray-900 dark:text-white ">
+        <h2 className="text-lg font-semibold text-gray-900">
           Commandes
         </h2>
         <OrderSearch />
       </div>
       <div className="overflow-x-auto">
-        <table className="min-w-full w-full divide-y divide-gray-200 dark:divide-gray-700 border dark:border-gray-500 rounded-md">
-          <thead className="bg-gray-50 dark:bg-neutral-800">
+        <table className="min-w-full w-full divide-y divide-gray-200 border rounded-md">
+          <thead className="bg-gray-50">
             <tr>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Numéro
@@ -73,13 +73,13 @@ const OrdersPage = () => {
               </th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200 dark:divide-gray-700 ">
+          <tbody className="divide-y divide-gray-200 ">
             {orders.length === 0 ? (
-              <tr className="bg-white dark:bg-neutral-900">
+              <tr className="bg-white">
                 <td colSpan={5} className="px-6 py-4 text-center text-sm text-gray-500">Aucune commande trouvée.</td>
               </tr>
             ) : orders.map((order) => (
-              <tr key={order.id} className="bg-white dark:bg-neutral-900">
+              <tr key={order.id} className="bg-white">
                 <td className="px-6 py-4 whitespace-nowrap">
                   {order.orderNumber}
                 </td>

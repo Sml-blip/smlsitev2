@@ -195,7 +195,7 @@ const ProductsPage = () => {
   if (loading) return <Loader />;
 
   return (
-    <div className="max-w-screen-xl mx-auto w-full bg-white dark:bg-neutral-900 rounded-lg shadow-md p-6 my-4">
+    <div className="max-w-screen-xl mx-auto w-full bg-white rounded-lg shadow-md p-6 my-4">
       <ProductHeader searchTerm={searchTerm} onSearchChange={setSearchTerm} />
       <div className="overflow-x-auto">
           <div className="flex items-center justify-between mb-4">
@@ -205,14 +205,14 @@ const ProductsPage = () => {
             </p>
             <button
               onClick={() => setSortOrder((prev) => prev === "newest" ? "oldest" : "newest")}
-              className="flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-yellow-500 dark:hover:border-yellow-500 text-gray-600 dark:text-gray-300 transition-colors"
+              className="flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-lg border border-gray-200 hover:border-yellow-500 text-gray-600 transition-colors"
             >
               <ArrowUpDown size={14} />
               {sortOrder === "newest" ? "Plus récent" : "Plus ancien"}
             </button>
           </div>
-        <table className="min-w-full overflow-x-scroll divide-y divide-gray-200 dark:divide-gray-700 border dark:border-gray-500">
-          <thead className="bg-gray-50 dark:bg-neutral-800 sticky top-0 z-10">
+        <table className="min-w-full overflow-x-scroll divide-y divide-gray-200 border">
+          <thead className="bg-gray-50 sticky top-0 z-10">
             <tr>
               <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Image
@@ -234,9 +234,9 @@ const ProductsPage = () => {
               </th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+          <tbody className="divide-y divide-gray-200">
             {displayedProducts.map((product) => (
-              <tr key={product.id} className="bg-white dark:bg-neutral-900 hover:bg-gray-50 dark:hover:bg-neutral-800">
+              <tr key={product.id} className="bg-white hover:bg-gray-50">
                 <td className="px-4 py-2">
                   <div className="relative group">
                     <input
@@ -255,7 +255,7 @@ const ProductsPage = () => {
                       className="relative"
                     >
                       {uploadingId === product.id ? (
-                        <div className="h-10 w-10 rounded-lg bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                        <div className="h-10 w-10 rounded-lg bg-gray-200 flex items-center justify-center">
                           <Loader2 size={16} className="animate-spin text-yellow-500" />
                         </div>
                       ) : (
@@ -280,7 +280,7 @@ const ProductsPage = () => {
                     type="text"
                     value={product.name}
                     onChange={(e) => handleFieldChange(product.id, "name", e.target.value)}
-                    className="w-full bg-transparent border border-transparent hover:border-gray-300 dark:hover:border-gray-600 focus:border-yellow-500 focus:outline-none rounded px-2 py-1 text-sm text-black dark:text-white"
+                    className="w-full bg-transparent border border-transparent hover:border-gray-300 focus:border-yellow-500 focus:outline-none rounded px-2 py-1 text-sm text-black"
                   />
                 </td>
                 <td className="px-4 py-2">
@@ -289,7 +289,7 @@ const ProductsPage = () => {
                       type="number"
                       value={product.price}
                       onChange={(e) => handleFieldChange(product.id, "price", parseFloat(e.target.value) || 0)}
-                      className="w-20 bg-transparent border border-transparent hover:border-gray-300 dark:hover:border-gray-600 focus:border-yellow-500 focus:outline-none rounded px-2 py-1 text-sm text-black dark:text-white"
+                      className="w-20 bg-transparent border border-transparent hover:border-gray-300 focus:border-yellow-500 focus:outline-none rounded px-2 py-1 text-sm text-black"
                     />
                     <span className="text-xs text-gray-500">TND</span>
                   </div>
@@ -298,7 +298,7 @@ const ProductsPage = () => {
                     <select
                       value={product.category || ""}
                       onChange={(e) => handleFieldChange(product.id, "category", e.target.value)}
-                      className="w-full bg-transparent border border-transparent hover:border-gray-300 dark:hover:border-gray-600 focus:border-yellow-500 focus:outline-none rounded px-2 py-1 text-sm text-black dark:text-white dark:bg-neutral-900"
+                      className="w-full bg-transparent border border-transparent hover:border-gray-300 focus:border-yellow-500 focus:outline-none rounded px-2 py-1 text-sm text-black"
                     >
                       <option value="">-- Sélectionner --</option>
                       {CATEGORIES.map((cat) => (
@@ -313,7 +313,7 @@ const ProductsPage = () => {
                       value={product.description || ""}
                       onChange={(e) => handleFieldChange(product.id, "description", e.target.value)}
                       rows={2}
-                      className="w-full bg-transparent border border-transparent hover:border-gray-300 dark:hover:border-gray-600 focus:border-yellow-500 focus:outline-none rounded px-2 py-1 text-sm text-black dark:text-white resize-y"
+                      className="w-full bg-transparent border border-transparent hover:border-gray-300 focus:border-yellow-500 focus:outline-none rounded px-2 py-1 text-sm text-black resize-y"
                     />
                   </td>
                 <td className="px-4 py-2">
@@ -321,7 +321,7 @@ const ProductsPage = () => {
                     <button
                       onClick={() => handleSave(product)}
                       disabled={savingId === product.id}
-                      className="p-2 rounded-lg hover:bg-green-100 dark:hover:bg-green-900/30 text-green-600 transition-colors"
+                      className="p-2 rounded-lg hover:bg-green-100 text-green-600 transition-colors"
                       title="Enregistrer"
                     >
                       {savingId === product.id ? (
@@ -333,7 +333,7 @@ const ProductsPage = () => {
                     <button
                       onClick={() => handleDelete(product.id)}
                       disabled={deletingId === product.id}
-                      className="p-2 rounded-lg hover:bg-red-100 dark:hover:bg-red-900/30 text-red-600 transition-colors"
+                      className="p-2 rounded-lg hover:bg-red-100 text-red-600 transition-colors"
                       title="Supprimer"
                     >
                       {deletingId === product.id ? (

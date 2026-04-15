@@ -167,7 +167,7 @@ const ProductImport = () => {
     return (
       <Button
         onClick={() => setIsOpen(true)}
-        className="bg-black hover:bg-black/80 text-white dark:bg-white dark:text-black dark:hover:bg-white/80"
+        className="bg-black hover:bg-black/80 text-white"
       >
         <Upload className="w-4 h-4 mr-2" />
         Import CSV
@@ -177,7 +177,7 @@ const ProductImport = () => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-      <div className="bg-white dark:bg-black border border-border rounded-lg shadow-xl w-full max-w-3xl mx-4 max-h-[90vh] overflow-hidden">
+      <div className="bg-white border border-border rounded-lg shadow-xl w-full max-w-3xl mx-4 max-h-[90vh] overflow-hidden">
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-border">
           <div>
@@ -305,7 +305,7 @@ const ProductImport = () => {
                   <span className="font-medium">{successCount} imported</span>
                 </div>
                 {failedCount > 0 && (
-                  <div className="flex items-center gap-2 px-3 py-2 bg-black/10 dark:bg-white/10 rounded-lg">
+                  <div className="flex items-center gap-2 px-3 py-2 bg-black/10 rounded-lg">
                     <XCircle className="w-4 h-4" />
                     <span className="font-medium">{failedCount} failed</span>
                   </div>
@@ -313,7 +313,7 @@ const ProductImport = () => {
               </div>
 
               {/* Real-time Logs */}
-              <div className="bg-black dark:bg-white/5 rounded-lg p-4 h-64 overflow-y-auto font-mono text-xs">
+              <div className="bg-black rounded-lg p-4 h-64 overflow-y-auto font-mono text-xs">
                 {logs.map((log, i) => (
                   <div 
                     key={i} 

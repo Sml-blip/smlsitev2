@@ -34,9 +34,9 @@ const footerCategories = [
 
 const Footer = () => {
   return (
-    <footer className="relative overflow-hidden">
+    <footer className="relative overflow-hidden border-t border-yellow-100">
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-neutral-900 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-yellow-50/40 to-white" />
 
       {/* Yellow Accent Gradient Overlay */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-yellow-400 to-primary" />
@@ -51,14 +51,15 @@ const Footer = () => {
           <div className="space-y-6">
             <Link href="/" className="inline-block">
               <Image
-                src="/images/logo-light.svg"
+                src="/images/logo-dark.svg"
                 alt="SML Informatique"
                 width={160}
                 height={60}
                 className="h-12 w-auto"
+                onError={(e) => { (e.target as HTMLImageElement).src = "/images/logo-light.svg"; }}
               />
             </Link>
-            <p className="text-white/70 leading-relaxed text-sm">
+            <p className="text-gray-500 leading-relaxed text-sm">
               Votre boutique unique pour tout l&apos;électronique et
               l&apos;informatique. Qualité, service et prix imbattables.
             </p>
@@ -68,37 +69,37 @@ const Footer = () => {
               <Link
                 href="https://www.facebook.com/p/SML-100095443628667/"
                 target="_blank"
-                className="w-10 h-10 bg-white/10 hover:bg-[#1877F2] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 bg-gray-100 hover:bg-[#1877F2] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
               >
-                <FaFacebook size={20} className="text-white" />
+                <FaFacebook size={20} className="text-gray-600" />
               </Link>
               <Link
                 href="https://www.instagram.com/sml.tech"
                 target="_blank"
-                className="w-10 h-10 bg-white/10 hover:bg-gradient-to-br hover:from-[#833ab4] hover:via-[#fd1d1d] hover:to-[#fcb045] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 bg-gray-100 hover:bg-gradient-to-br hover:from-[#833ab4] hover:via-[#fd1d1d] hover:to-[#fcb045] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
               >
-                <FaInstagramSquare size={20} className="text-white" />
+                <FaInstagramSquare size={20} className="text-gray-600" />
               </Link>
               <Link
                 href="https://www.tiktok.com/@sml.tech/"
                 target="_blank"
-                className="w-10 h-10 bg-white/10 hover:bg-black rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 border border-transparent hover:border-white/20"
+                className="w-10 h-10 bg-gray-100 hover:bg-black rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 border border-transparent hover:border-gray-300"
               >
-                <FaTiktok size={18} className="text-white" />
+                <FaTiktok size={18} className="text-gray-700 group-hover:text-white" />
               </Link>
               <Link
                 href="http://wa.me/21648028729"
                 target="_blank"
-                className="w-10 h-10 bg-white/10 hover:bg-[#25D366] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 bg-gray-100 hover:bg-[#25D366] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
               >
-                <FaWhatsapp size={20} className="text-white" />
+                <FaWhatsapp size={20} className="text-gray-600" />
               </Link>
             </div>
           </div>
 
           {/* Categories — col 1 */}
           <div className="space-y-6">
-            <h3 className="text-lg font-bold text-white flex items-center gap-2">
+            <h3 className="text-lg font-bold text-gray-900 flex items-center gap-2">
               <span className="w-8 h-0.5 bg-primary" />
               Catégories
             </h3>
@@ -107,7 +108,7 @@ const Footer = () => {
                 <li key={name}>
                   <Link
                     href={`/shop?category=${encodeURIComponent(name)}`}
-                    className="text-white/70 hover:text-primary transition-colors duration-300 flex items-center gap-2.5 group"
+                    className="text-gray-500 hover:text-primary transition-colors duration-300 flex items-center gap-2.5 group"
                   >
                     <Icon size={15} className="text-primary/70 group-hover:text-primary shrink-0 transition-colors duration-300" />
                     <span className="text-sm">{name.charAt(0) + name.slice(1).toLowerCase()}</span>
@@ -120,7 +121,7 @@ const Footer = () => {
 
           {/* Categories — col 2 */}
           <div className="space-y-6">
-            <h3 className="text-lg font-bold text-white flex items-center gap-2 invisible">
+            <h3 className="text-lg font-bold text-gray-900 flex items-center gap-2 invisible">
               <span className="w-8 h-0.5 bg-primary" />
               &nbsp;
             </h3>
@@ -129,7 +130,7 @@ const Footer = () => {
                 <li key={name}>
                   <Link
                     href={`/shop?category=${encodeURIComponent(name)}`}
-                    className="text-white/70 hover:text-primary transition-colors duration-300 flex items-center gap-2.5 group"
+                    className="text-gray-500 hover:text-primary transition-colors duration-300 flex items-center gap-2.5 group"
                   >
                     <Icon size={15} className="text-primary/70 group-hover:text-primary shrink-0 transition-colors duration-300" />
                     <span className="text-sm">{name.charAt(0) + name.slice(1).toLowerCase()}</span>
@@ -142,16 +143,16 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="space-y-6">
-            <h3 className="text-lg font-bold text-white flex items-center gap-2">
+            <h3 className="text-lg font-bold text-gray-900 flex items-center gap-2">
               <span className="w-8 h-0.5 bg-primary" />
               Contact
             </h3>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-white/70 text-sm">
+              <li className="flex items-start gap-3 text-gray-500 text-sm">
                 <MapPin size={18} className="text-primary shrink-0 mt-0.5" />
                 <span>Ain Mnekh, El Kef</span>
               </li>
-              <li className="flex items-center gap-3 text-white/70 text-sm">
+              <li className="flex items-center gap-3 text-gray-500 text-sm">
                 <Phone size={18} className="text-primary shrink-0" />
                 <span>+216 78 203 905</span>
               </li>
@@ -184,21 +185,21 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="relative z-10 border-t border-white/10">
+      <div className="relative z-10 border-t border-yellow-100">
         <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-white/50 text-sm">
-              &copy; 2025 <span className="text-primary">SML INFORMATIQUE</span>
+            <p className="text-gray-400 text-sm">
+              &copy; 2025 <span className="text-primary font-semibold">SML INFORMATIQUE</span>
               . Tous droits réservés.
             </p>
             <div className="flex items-center gap-6 text-sm">
-              <Link href="#" className="text-white/50 hover:text-primary transition-colors">
+              <Link href="#" className="text-gray-400 hover:text-primary transition-colors">
                 Conditions
               </Link>
-              <Link href="#" className="text-white/50 hover:text-primary transition-colors">
+              <Link href="#" className="text-gray-400 hover:text-primary transition-colors">
                 Confidentialité
               </Link>
-              <Link href="#" className="text-white/50 hover:text-primary transition-colors">
+              <Link href="#" className="text-gray-400 hover:text-primary transition-colors">
                 Cookies
               </Link>
             </div>

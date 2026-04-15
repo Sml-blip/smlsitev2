@@ -33,25 +33,25 @@ const OrderDetails = () => {
   };
 
   return (
-    <div className="max-w-screen-xl w-full mx-auto bg-white dark:bg-neutral-900 rounded-lg shadow-md p-6 my-4">
-      <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+    <div className="max-w-screen-xl w-full mx-auto bg-white rounded-lg shadow-md p-6 my-4">
+      <h2 className="text-lg font-semibold text-gray-900 mb-4">
         Order Details
       </h2>
 
-      <Separator className="dark:bg-gray-500 my-2" />
+      <Separator className="my-2" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">
             Order Information
           </h3>
-          <p className="text-gray-700 dark:text-gray-300">
+          <p className="text-gray-700">
             Order Number: {order.orderNumber}
           </p>
-          <p className="text-gray-700 dark:text-gray-300">
+          <p className="text-gray-700">
             Customer Name: {order.customerName}
           </p>
-          <p className="text-gray-700 dark:text-gray-300">Date: {order.date}</p>
-          <p className="text-gray-700 dark:text-gray-300">
+          <p className="text-gray-700">Date: {order.date}</p>
+          <p className="text-gray-700">
             Status:{" "}
             <span
               className={`inline-flex text-sm font-semibold rounded-full px-2 ${
@@ -67,14 +67,14 @@ const OrderDetails = () => {
           </p>
         </div>
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">
             Shipping Information
           </h3>
-          <p className="text-gray-700 dark:text-gray-300">
+          <p className="text-gray-700">
             Address: {order.shippingAddress}
           </p>
-          <p className="text-gray-700 dark:text-gray-300">City: {order.city}</p>
-          <p className="text-gray-700 dark:text-gray-300">
+          <p className="text-gray-700">City: {order.city}</p>
+          <p className="text-gray-700">
             Country: {order.country}
           </p>
         </div>
@@ -82,14 +82,14 @@ const OrderDetails = () => {
 
       
       <div className="mt-6">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+        <h3 className="text-lg font-semibold text-gray-900 mb-2">
           Ordered Products
         </h3>
-        <ul className=" dark:divide-gray-700 my-4 space-y-2">
+        <ul className=" my-4 space-y-2">
           {order.products.map((product) => (
             <li key={product.id} className="">
-              <div className="flex justify-between items-center !border dark:border-gray-500 px-2 rounded-md ">
-                <p className="text-gray-900 dark:text-white text-lg font-semibold">{product.name}</p>
+              <div className="flex justify-between items-center !border px-2 rounded-md ">
+                <p className="text-gray-900 text-lg font-semibold">{product.name}</p>
                 <Image
                   src={product.image}
                   alt="product image"
@@ -97,7 +97,7 @@ const OrderDetails = () => {
                   height={80}
                   className="object-contain"
                 />
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700">
                   Qty : {product.quantity}
                 </p>
                 <p>Price : {product.price}</p>
@@ -107,10 +107,10 @@ const OrderDetails = () => {
         </ul>
       </div>
       <div className="mt-6 flex items-center gap-4">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+        <h3 className="text-lg font-semibold text-gray-900">
           Total :
         </h3>
-        <p className="text-xl font-bold text-gray-900 dark:text-white">
+        <p className="text-xl font-bold text-gray-900">
           ${order.total}
         </p>
       </div>

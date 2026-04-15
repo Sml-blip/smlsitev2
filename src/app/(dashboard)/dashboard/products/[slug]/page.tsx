@@ -54,14 +54,14 @@ const ProductDetailsPage = ({ params }: ProductDetailsPageProps) => {
 
   if (!product) {
     return (
-      <div className="max-w-screen-xl mx-auto p-8 bg-white dark:bg-neutral-900 rounded-lg shadow-md">
+      <div className="max-w-screen-xl mx-auto p-8 bg-white rounded-lg shadow-md">
         <p>Product not found</p>
       </div>
     );
   }
 
   return (
-    <div className="max-w-screen-xl mx-auto p-8 bg-white dark:bg-neutral-900 rounded-lg shadow-md">
+    <div className="max-w-screen-xl mx-auto p-8 bg-white rounded-lg shadow-md">
       <div className="py-2">
         <BreadcrumbComponent
           links={["/dashboard", "/products"]}

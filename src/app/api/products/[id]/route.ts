@@ -43,6 +43,7 @@ export async function PUT(
           name: body.name,
           price: parseFloat(body.price),
           category: body.category,
+          parent_category: body.parent_category || null,
           brand: body.brand,
           description: body.description,
           discount: body.discount || 0,

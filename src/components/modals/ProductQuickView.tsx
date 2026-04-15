@@ -77,12 +77,12 @@ const ProductQuickViewModal = () => {
                   {/* product stock */}
                   <div className="">
                     {(product.stock || product.stockItems) === 0 ? (
-                      <p className="text-lg w-fit rounded-md">
-                        out of stock
+                      <p className="text-lg w-fit rounded-md text-red-500">
+                        Rupture de stock
                       </p>
                     ) : (
-                      <p className="text-lg w-fit rounded-md text-muted-foreground">
-                        Only {product.stockItems} items in stock
+                      <p className="text-lg w-fit rounded-md text-green-600 font-medium">
+                        En stock
                       </p>
                     )}
                   </div>
@@ -98,11 +98,11 @@ const ProductQuickViewModal = () => {
                     <div className="">
                       {/* Original Price */}
                       <p className="text-muted-foreground line-through">
-                        ${product.price}
+                        {product.price} TND
                       </p>
                       {/* Discounted Price */}
                       <p className="text-3xl font-bold text-green-500">
-                        ${calculateDiscount(product.price, product.discount)}
+                        {calculateDiscount(product.price, product.discount)} TND
                       </p>
                     </div>
                     <ProductQuantityChange

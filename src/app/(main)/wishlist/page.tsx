@@ -22,13 +22,13 @@ const WishlistPage = () => {
   }
 
   return (
-    <div className="px-4 py-8 lg:px-16 lg:py-12 bg-gray-100 dark:bg-neutral-900">
+    <div className="px-4 py-8 lg:px-16 lg:py-12 bg-gradient-to-b from-white via-yellow-50/30 to-white">
       <div className="max-w-screen-xl mx-auto">
         <div className="mb-4">
-          <h1 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-white">
+          <h1 className="text-3xl lg:text-4xl font-bold text-gray-800">
             Liste de souhaits
           </h1>
-          <p className="text-gray-600 dark:text-gray-300">
+          <p className="text-gray-600">
             Vos articles sauvegardés
           </p>
         </div>
@@ -44,9 +44,9 @@ const WishlistPage = () => {
             {wishlistItems.map((cart) => (
               <div
                 key={cart.id}
-                className="bg-white dark:bg-black rounded-lg shadow-md overflow-hidden"
+                className="bg-white border border-yellow-100 shadow-sm rounded-lg overflow-hidden"
               >
-                <div className="relative w-full h-48 mt-2 bg-gray-50 dark:bg-neutral-800">
+                <div className="relative w-full h-48 mt-2 bg-gray-50">
                   <ProductImage
                     src={cart.images?.[0]}
                     alt={cart.name}
@@ -57,11 +57,11 @@ const WishlistPage = () => {
                   <div className="p-4">
                     <Link
                       href={getProductUrl(cart)}
-                      className="text-xl font-semibold text-gray-800 dark:text-white hover:opacity-60"
+                      className="text-xl font-semibold text-gray-800 hover:opacity-60"
                     >
                     {cart.name.slice(0, 50)}
                   </Link>
-                  <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  <p className="text-gray-700 mb-4">
                     {cart.description.slice(0, 100)}
                   </p>
                   <div className="flex justify-between items-center">

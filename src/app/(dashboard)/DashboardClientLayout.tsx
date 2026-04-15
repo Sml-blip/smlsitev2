@@ -37,7 +37,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="w-8 h-8 border-2 border-yellow-500 border-t-transparent rounded-full animate-spin" />
       </div>
     );
@@ -45,8 +45,8 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
 
   if (!isVerified) {
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center p-4">
-        <div className="bg-white dark:bg-neutral-900 rounded-2xl p-8 max-w-md w-full shadow-2xl border border-yellow-500/30">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl border border-yellow-500/30">
           <div className="flex justify-center mb-6">
             <div 
               className="w-20 h-20 rounded-full bg-black flex items-center justify-center"
@@ -59,7 +59,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
             </div>
           </div>
           
-          <h1 className="text-2xl font-bold text-center mb-2 dark:text-white">
+          <h1 className="text-2xl font-bold text-center mb-2">
             Accès Administrateur
           </h1>
           <p className="text-gray-500 text-center mb-6">
@@ -78,9 +78,9 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
                 setError(false);
               }}
               placeholder="Code PIN"
-              className={`w-full px-4 py-3 text-center text-2xl tracking-[0.5em] font-mono rounded-lg border-2 
-                ${error ? "border-red-500 bg-red-50 dark:bg-red-900/20" : "border-gray-200 dark:border-gray-700"} 
-                focus:outline-none focus:border-yellow-500 dark:bg-neutral-800 dark:text-white`}
+              className={`w-full px-4 py-3 text-center text-2xl tracking-[0.5em] font-mono rounded-lg border-2
+                ${error ? "border-red-500 bg-red-50" : "border-gray-200"}
+                focus:outline-none focus:border-yellow-500`}
               autoFocus
             />
             

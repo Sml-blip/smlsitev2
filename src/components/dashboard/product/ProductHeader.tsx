@@ -68,7 +68,7 @@ const ProductHeader = ({ searchTerm = "", onSearchChange }: ProductHeaderProps) 
         <div className="flex items-center gap-2 flex-wrap">
           <Input 
               placeholder="Rechercher un produit..." 
-              className="p-5 rounded-md w-full lg:w-64 text-black dark:text-white"
+              className="p-5 rounded-md w-full lg:w-64 text-black"
               value={searchTerm}
               onChange={(e) => onSearchChange?.(e.target.value)}
             />
@@ -78,7 +78,7 @@ const ProductHeader = ({ searchTerm = "", onSearchChange }: ProductHeaderProps) 
           <Button
             variant="outline"
             onClick={() => setShowConfirm(true)}
-            className="border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
+            className="border-black text-black hover:bg-black hover:text-white"
           >
             <Trash2 className="w-4 h-4 mr-2" />
             Supprimer tout
@@ -96,7 +96,7 @@ const ProductHeader = ({ searchTerm = "", onSearchChange }: ProductHeaderProps) 
       {/* Delete Confirmation Modal with Code */}
       {showConfirm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
-          <div className="bg-white dark:bg-black border-2 border-red-500 rounded-xl shadow-2xl p-6 max-w-md mx-4">
+          <div className="bg-white border-2 border-red-500 rounded-xl shadow-2xl p-6 max-w-md mx-4">
             <div className="flex items-center gap-3 mb-4 text-red-500">
               <AlertTriangle className="w-8 h-8" />
               <h3 className="text-xl font-bold">ATTENTION - Zone Dangereuse</h3>
@@ -106,11 +106,11 @@ const ProductHeader = ({ searchTerm = "", onSearchChange }: ProductHeaderProps) 
               Cette action est <strong>IRRÉVERSIBLE</strong>. Tous les produits seront définitivement supprimés de la base de données.
             </p>
             
-            <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 mb-4">
-              <p className="text-sm font-medium text-red-800 dark:text-red-200 mb-2">
+            <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4">
+              <p className="text-sm font-medium text-red-800 mb-2">
                 Pour confirmer, tapez le code ci-dessous:
               </p>
-              <code className="block bg-white dark:bg-black px-3 py-2 rounded border font-mono text-lg tracking-wider text-center">
+              <code className="block bg-white px-3 py-2 rounded border font-mono text-lg tracking-wider text-center">
                 {DELETION_CODE}
               </code>
             </div>

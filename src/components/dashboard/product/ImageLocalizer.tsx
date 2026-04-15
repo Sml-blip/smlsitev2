@@ -102,7 +102,7 @@ const ImageLocalizer = () => {
       <Button
         variant="outline"
         onClick={() => setIsOpen(true)}
-        className="border-primary text-black dark:text-white hover:bg-primary hover:text-black"
+        className="border-primary text-black hover:bg-primary hover:text-black"
       >
         <CloudDownload className="w-4 h-4 mr-2" />
         Localiser Images
@@ -112,7 +112,7 @@ const ImageLocalizer = () => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
-      <div className="bg-white dark:bg-black border border-white/10 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden">
+      <div className="bg-white border border-white/10 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden">
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-white/10 bg-black text-white">
           <div className="flex items-center gap-3">
@@ -140,22 +140,22 @@ const ImageLocalizer = () => {
             </div>
           ) : status ? (
             <>
-              <div className="bg-black/5 dark:bg-white/5 rounded-xl p-3 text-center">
+              <div className="bg-black/5 rounded-xl p-3 text-center">
                 <Database className="w-5 h-5 text-primary mx-auto mb-1" />
                 <p className="text-xl font-bold">{status.total}</p>
                 <p className="text-xs text-muted-foreground">Total</p>
               </div>
-              <div className="bg-red-50 dark:bg-red-900/20 rounded-xl p-3 text-center">
+              <div className="bg-red-50 rounded-xl p-3 text-center">
                 <ExternalLink className="w-5 h-5 text-red-500 mx-auto mb-1" />
                 <p className="text-xl font-bold text-red-600">{status.external}</p>
                 <p className="text-xs text-red-600/70">Externes</p>
               </div>
-              <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-3 text-center">
+              <div className="bg-green-50 rounded-xl p-3 text-center">
                 <Database className="w-5 h-5 text-green-500 mx-auto mb-1" />
                 <p className="text-xl font-bold text-green-600">{status.local}</p>
                 <p className="text-xs text-green-600/70">Locales</p>
               </div>
-              <div className="bg-black/5 dark:bg-white/5 rounded-xl p-3 text-center">
+              <div className="bg-black/5 rounded-xl p-3 text-center">
                 <ImageIcon className="w-5 h-5 text-muted-foreground mx-auto mb-1" />
                 <p className="text-xl font-bold">{status.noImage}</p>
                 <p className="text-xs text-muted-foreground">Sans image</p>
@@ -173,7 +173,7 @@ const ImageLocalizer = () => {
               </span>
               <span className="text-sm font-bold text-primary">{progressPercent}%</span>
             </div>
-            <div className="w-full bg-black/10 dark:bg-white/10 rounded-full h-2">
+            <div className="w-full bg-black/10 rounded-full h-2">
               <div 
                 className="bg-primary h-2 rounded-full transition-all duration-300"
                 style={{ width: `${progressPercent}%` }}
@@ -219,7 +219,7 @@ const ImageLocalizer = () => {
         </div>
 
         {/* Actions */}
-        <div className="flex items-center justify-between p-4 border-t border-white/10 bg-black/5 dark:bg-white/5">
+        <div className="flex items-center justify-between p-4 border-t border-white/10 bg-black/5">
           <p className="text-xs text-muted-foreground">
             Les images seront stockées dans Supabase Storage
           </p>

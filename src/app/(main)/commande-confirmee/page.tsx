@@ -81,7 +81,7 @@ const ConfirmationContent = () => {
   }, [countdown, redirected, waUrl]);
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-start justify-center px-4 py-12">
+    <div className="min-h-screen bg-gradient-to-b from-white via-yellow-50/30 to-white flex items-start justify-center px-4 py-12">
       <div className="w-full max-w-xl space-y-4">
 
         {/* ── Success header card ── */}

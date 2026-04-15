@@ -5,15 +5,15 @@ import Link from "next/link";
 
 const BannerOne = () => {
   return (
-    <section className="relative w-full bg-black py-4">
+    <section className="relative w-full bg-gradient-to-br from-yellow-50 via-white to-yellow-50 py-4 border-t border-yellow-100">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8 flex flex-col-reverse lg:flex-row items-center justify-between">
         <div className="flex flex-col justify-center items-center text-center lg:text-left lg:w-1/2">
-          <h2 className="text-3xl lg:text-5xl text-center font-bold text-white mt-4 leading-tight">
+          <h2 className="text-3xl lg:text-5xl text-center font-bold text-gray-900 mt-4 leading-tight">
             Découvrez les derniers gadgets
             <br className="hidden lg:block" /> avec des offres exceptionnelles !
           </h2>
-          <p className="text-white/80 text-lg mt-4">
-            Explorez une large gamme d'électronique à des prix imbattables.
+          <p className="text-gray-600 text-lg mt-4">
+            Explorez une large gamme d&apos;électronique à des prix imbattables.
           </p>
           <Link 
             href="/shop" 

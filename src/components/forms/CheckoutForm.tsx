@@ -22,6 +22,7 @@ type FormData = z.infer<typeof schema>;
 const CheckoutForm: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { cartItems, getTotalAmount, clearCart } = useCartStore();
+  const hasItems = cartItems.length > 0;
   const router = useRouter();
 
   const {
@@ -138,7 +139,7 @@ const CheckoutForm: React.FC = () => {
         </div>
 
         <div className="flex items-center justify-end">
-          <Button type="submit" disabled={isLoading} className="gap-2">
+          <Button type="submit" disabled={isLoading || !hasItems} className="gap-2">
             {isLoading && <Loader2 className="animate-spin" size={18} />}
             {isLoading ? "Traitement..." : "Commander"}
           </Button>

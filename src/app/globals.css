@@ -14,8 +14,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 0%;
 
-    /* Yellow Primary - #FFCC00 */
-    --primary: 48 100% 50%;
+    /* Brand Yellow - #FBBF24 */
+    --primary: 45 93% 47%;
     --primary-foreground: 0 0% 0%;
 
     /* Black Secondary */
@@ -27,8 +27,8 @@
     --muted-foreground: 0 0% 35%;
 
     /* Light Yellow Accent */
-    --accent: 48 100% 95%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 45 93% 90%;
+    --accent-foreground: 45 93% 20%;
 
     /* Black for destructive */
     --destructive: 0 0% 0%;
@@ -36,7 +36,7 @@
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 48 100% 50%;
+    --ring: 45 93% 47%;
 
     --radius: 0.5rem;
   }
@@ -52,8 +52,8 @@
     --popover: 0 0% 5%;
     --popover-foreground: 0 0% 100%;
 
-    /* Yellow Primary */
-    --primary: 48 100% 50%;
+    /* Brand Yellow */
+    --primary: 45 93% 47%;
     --primary-foreground: 0 0% 0%;
 
     /* White Secondary */
@@ -65,8 +65,8 @@
     --muted-foreground: 0 0% 65%;
 
     /* Dark Accent */
-    --accent: 0 0% 10%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 45 93% 15%;
+    --accent-foreground: 45 93% 90%;
 
     /* White for destructive in dark mode */
     --destructive: 0 0% 100%;
@@ -74,7 +74,7 @@
 
     --border: 0 0% 15%;
     --input: 0 0% 15%;
-    --ring: 48 100% 50%;
+    --ring: 45 93% 47%;
   }
 }
 
@@ -88,6 +88,11 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+}
+
+/* Force light color-scheme so browser UI (inputs, scrollbars) stays light */
+html {
+  color-scheme: light;
 }
 
 html,

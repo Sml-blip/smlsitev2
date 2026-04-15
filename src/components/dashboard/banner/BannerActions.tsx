@@ -15,18 +15,18 @@ const BannerActions = () => {
     <div>
       <Popover>
         <PopoverTrigger className="">
-          <div className="flex items-center justify-center hover:bg-slate-200 p-2 rounded-full dark:hover:bg-slate-900 duration-200">
+          <div className="flex items-center justify-center hover:bg-slate-200 p-2 rounded-full duration-200">
             <MoreHorizontal />
           </div>
         </PopoverTrigger>
         <PopoverContent className="text-start">
           <Link
             href={`/dashboard/orders/id`}
-            className="py-2 px-4 rounded-md w-full  block hover:bg-slate-200 dark:hover:bg-slate-900"
+            className="py-2 px-4 rounded-md w-full  block hover:bg-slate-200"
           >
             Update Banner
           </Link>
-          <button className="w-full text-start hover:bg-slate-200 dark:hover:bg-slate-900 py-2 px-4 rounded-md">
+          <button className="w-full text-start hover:bg-slate-200 py-2 px-4 rounded-md">
             Delete Banner
           </button>
         </PopoverContent>

@@ -157,13 +157,21 @@ async function sendWhatsAppConfirmation(params: {
   return res.json();
 }
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
+    const { searchParams } = new URL(request.url);
+    const phone = searchParams.get('phone');
+
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
-    const { data, error } = await supabase
-      .from('orders')
-      .select('*')
-      .order('created_at', { ascending: false });
+    let query = supabase.from('orders').select('*').order('created_at', { ascending: false });
+
+    if (phone) {
+      // Normalize: strip spaces and leading +
+      const normalized = phone.replace(/\s+/g, '').replace(/^\+/, '');
+      query = query.ilike('phone', `%${normalized}%`);
+    }
+
+    const { data, error } = await query;
 
     if (error) {
       return NextResponse.json({ error: error.message }, { status: 500 });

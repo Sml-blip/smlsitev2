@@ -202,7 +202,7 @@ export default function SeoAiChat({ open: controlledOpen, onOpenChange, preloadM
         className={cn(
           'fixed top-0 right-0 h-full z-[60] flex flex-col',
           'w-[380px] max-w-[95vw]',
-          'bg-white dark:bg-neutral-900',
+          'bg-white',
           'border-l border-border shadow-2xl',
           'transition-transform duration-300 ease-in-out',
           open ? 'translate-x-0' : 'translate-x-full'
@@ -289,7 +289,7 @@ export default function SeoAiChat({ open: controlledOpen, onOpenChange, preloadM
                   'max-w-[90%] rounded-2xl px-3 py-2 text-sm',
                   msg.role === 'user'
                     ? 'bg-[#FFCC00] text-black rounded-br-sm font-medium'
-                    : 'bg-muted dark:bg-neutral-800 rounded-bl-sm'
+                    : 'bg-muted rounded-bl-sm'
                 )}
               >
                 {/* AI response metadata */}
@@ -339,7 +339,7 @@ export default function SeoAiChat({ open: controlledOpen, onOpenChange, preloadM
           {/* Typing indicator */}
           {loading && (
             <div className="flex justify-start">
-              <div className="bg-muted dark:bg-neutral-800 rounded-2xl rounded-bl-sm px-4 py-3">
+              <div className="bg-muted rounded-2xl rounded-bl-sm px-4 py-3">
                 <div className="flex items-center gap-1.5">
                   <Loader2 size={14} className="animate-spin text-[#FFCC00]" />
                   <span className="text-xs text-muted-foreground">Génération en cours…</span>

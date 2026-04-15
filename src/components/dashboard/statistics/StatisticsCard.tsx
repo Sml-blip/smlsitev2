@@ -17,13 +17,13 @@ const StatisticsCard = ({
     <div
       className={`bg-${
         color || "white"
-      } dark:bg-black w-full rounded-lg p-4 shadow-md flex items-center justify-center lg:justify-between mb-4`}
+      } w-full rounded-lg p-4 shadow-md flex items-center justify-center lg:justify-between mb-4`}
     >
       <div
         className={`flex items-center ${
           color
-            ? `text-${color}-800 dark:text-${color}-200`
-            : "text-gray-800 dark:text-gray-200"
+            ? `text-${color}-800`
+            : "text-gray-800"
         }`}
       >
         <div className={`${iconColor} p-4 rounded-full`}>

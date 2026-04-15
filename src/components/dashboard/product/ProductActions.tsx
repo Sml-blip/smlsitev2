@@ -197,7 +197,7 @@ const ProductActions = ({ product, onDelete, onUpdate }: ProductActionsProps) =>
     <div>
       <Popover open={popoverOpen} onOpenChange={setPopoverOpen}>
         <PopoverTrigger className="">
-          <div className="flex items-center justify-center hover:bg-slate-200 p-2 rounded-full dark:hover:bg-slate-900 duration-200">
+          <div className="flex items-center justify-center hover:bg-slate-200 p-2 rounded-full duration-200">
             <MoreHorizontal />
           </div>
         </PopoverTrigger>
@@ -207,27 +207,27 @@ const ProductActions = ({ product, onDelete, onUpdate }: ProductActionsProps) =>
               setPopoverOpen(false);
               setShowQuickEdit(true);
             }}
-            className="py-2 px-4 rounded-md w-full block hover:bg-slate-200 dark:hover:bg-slate-900 text-left flex items-center gap-2"
+            className="py-2 px-4 rounded-md w-full block hover:bg-slate-200 text-left flex items-center gap-2"
           >
             <Edit2 size={16} />
             Modifier rapidement
           </button>
           <Link
             href={`/dashboard/products/${productSlug}`}
-            className="py-2 px-4 rounded-md w-full block hover:bg-slate-200 dark:hover:bg-slate-900"
+            className="py-2 px-4 rounded-md w-full block hover:bg-slate-200"
           >
             Voir le produit
           </Link>
           <Link
             href={`/dashboard/products/${productSlug}/edit`}
-            className="py-2 px-4 rounded-md w-full block hover:bg-slate-200 dark:hover:bg-slate-900"
+            className="py-2 px-4 rounded-md w-full block hover:bg-slate-200"
           >
             Modifier (complet)
           </Link>
           <button 
             onClick={handleDeleteClick}
             disabled={deleting}
-            className="w-full text-start hover:bg-red-100 dark:hover:bg-red-900/30 py-2 px-4 rounded-md text-red-600 flex items-center gap-2"
+            className="w-full text-start hover:bg-red-100 py-2 px-4 rounded-md text-red-600 flex items-center gap-2"
           >
             <Trash2 size={16} />
             Supprimer

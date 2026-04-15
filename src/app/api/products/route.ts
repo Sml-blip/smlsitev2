@@ -12,8 +12,9 @@ export async function GET(request: Request) {
     
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
     
-    const category = searchParams.get('category');
-    const brand    = searchParams.get('brand');
+    const category       = searchParams.get('category');
+    const brand          = searchParams.get('brand');
+    const parentCategory = searchParams.get('parent_category');
 
     let query = supabase.from('products').select('*');
 
@@ -25,6 +26,9 @@ export async function GET(request: Request) {
     }
     if (brand && brand.trim()) {
       query = query.eq('brand', brand.trim());
+    }
+    if (parentCategory && parentCategory.trim()) {
+      query = query.eq('parent_category', parentCategory.trim());
     }
 
     const { data, error } = await query.order('created_at', { ascending: false });
@@ -63,6 +67,7 @@ export async function POST(request: Request) {
         slug: slug,
         price: parseFloat(body.price),
         category: body.category,
+        parent_category: body.parent_category || null,
         brand: body.brand || 'Generic',
         description: body.description || '',
         discount: body.discount || 0,

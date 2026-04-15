@@ -23,7 +23,7 @@ const OrderSummaryForCheckout = () => {
   }
 
   return (
-    <div className="bg-gray-100 dark:bg-neutral-800 p-4 rounded-lg">
+    <div className="bg-white border border-yellow-100 shadow-sm p-4 rounded-lg">
       {/* ordered items details */}
       <div>
         <h2 className="text-lg font-semibold my-2 lg:p-4">Articles</h2>
@@ -33,27 +33,27 @@ const OrderSummaryForCheckout = () => {
 
       {/* order summary for order place */}
       <div className="lg:px-4">
-        <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">
           Résumé de la commande
         </h2>
         <div className="flex justify-between mb-4">
-          <span className="text-gray-700 dark:text-gray-300">Sous-total:</span>
-          <span className="text-gray-900 dark:text-white">
+          <span className="text-gray-700">Sous-total:</span>
+          <span className="text-gray-900">
             {formatPrice(getTotalPrice())}
           </span>
         </div>
         <div className="flex justify-between items-center mb-4">
-          <span className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+          <span className="flex items-center gap-2 text-gray-700">
             <Truck size={16} className="text-orange-500" />
             Frais de livraison
           </span>
           <span className="font-semibold text-orange-500">+ {formatPrice(getShippingFee())}</span>
         </div>
         <div className="flex justify-between">
-          <span className="text-xl font-semibold text-gray-900 dark:text-white">
+          <span className="text-xl font-semibold text-gray-900">
             Total:
           </span>
-          <span className="text-xl font-semibold text-gray-900 dark:text-white">
+          <span className="text-xl font-semibold text-gray-900">
             {formatPrice(getTotalAmount())}
           </span>
         </div>
